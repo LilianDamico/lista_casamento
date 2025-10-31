@@ -21,8 +21,8 @@ const Home: React.FC = () => {
         </div>
 
         <div className="home__parents-side home__parents-side--right">
-          <p>Paulo Bier</p>
-          <p>Maria Bier</p>
+          <p>Wagner Bier</p>
+          <p>Francisca Maria de Carvalho Bier</p>
         </div>
       </div>
 

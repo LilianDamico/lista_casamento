@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/listaconvidados"; // ajuste conforme seu backend
+const API_URL = "http://localhost:8080/listaconvidados"; 
 
 export async function getConvidados() {
   const res = await fetch(API_URL);

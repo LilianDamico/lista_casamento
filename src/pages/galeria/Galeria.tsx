@@ -7,7 +7,7 @@ import Header from "components/header/Header";
 // importa as imagens manualmente
 import img1 from "assets/image/image1.png";
 import img2 from "assets/image/image2.png";
-import img3 from "assets/image/image3.png";
+import img3 from "assets/image/image3.jpg";
 import img4 from "assets/image/image4.png";
 import img5 from "assets/image/image5.png";
 import img6 from "assets/image/image6.png";
@@ -18,10 +18,25 @@ import img10 from "assets/image/image10.jpg";
 import img11 from "assets/image/image11.jpg";
 import img12 from "assets/image/image12.jpg";
 import img13 from "assets/image/image13.jpg";
-import Footer from "components/footer/Footer";
+import img14 from "assets/image/image14.jpg";
 
 const Galeria: React.FC = () => {
-  const imagens = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13];
+  const imagens = [
+    img1, 
+    img2, 
+    img3, 
+    img4, 
+    img5, 
+    img6, 
+    img7, 
+    img8, 
+    img9, 
+    img10, 
+    img11, 
+    img12, 
+    img13, 
+    img14
+  ];
 
   const settings = {
     dots: true,

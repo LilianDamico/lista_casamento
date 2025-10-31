@@ -8,10 +8,10 @@
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  z-index: 1;
+  z-index: 0;
 }
 
-/* ==== FILIGRANAS NOS 4 CANTOS ==== */
+
 .filigrana {
   position: fixed;
   width: 320px;
@@ -19,36 +19,34 @@
   background-image: url("../../assets/image/filigrana.webp");
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.50;
+  opacity: 0.80;
   pointer-events: none;
   z-index: 0;
   filter: contrast(110%) brightness(105%);
 }
 
-/* agora as diagonais foram invertidas */
 
-/* CANTO SUPERIOR ESQUERDO → vai para BOTTOM-RIGHT */
 .filigrana.bottom-right {
   bottom: 0;
   right: 0;
   transform: rotate(0deg);
 }
 
-/* CANTO SUPERIOR DIREITO → vai para BOTTOM-LEFT */
+
 .filigrana.bottom-left {
   bottom: 0;
   left: 0;
   transform: rotate(90deg);
 }
 
-/* CANTO INFERIOR ESQUERDO → vai para TOP-RIGHT */
+
 .filigrana.top-right {
-  top: 10;
+  top: 5;
   right: 0;
   transform: rotate(270deg);
 }
 
-/* CANTO INFERIOR DIREITO → vai para TOP-LEFT */
+
 .filigrana.top-left {
   top: 5;
   left: 0;
@@ -56,8 +54,6 @@
 }
 
 
-
-/* Nomes dos pais */
 .home__parents {
   display: flex;
   justify-content: space-between;
@@ -80,7 +76,7 @@
   text-align: right;
 }
 
-/* Convite central */
+
 .home__invite {
   display: flex;
   justify-content: center;
