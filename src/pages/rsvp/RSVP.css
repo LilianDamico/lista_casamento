@@ -1,0 +1,86 @@
+.rsvp-container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.rsvp-container h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.rsvp-form input,
+.rsvp-form textarea {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccd1d1;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+.rsvp-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.rsvp-form button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rsvp-form button:hover {
+  background-color: #1a252f;
+}
+
+.rsvp-success {
+  margin-top: 10px;
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.rsvp-list {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.rsvp-list h3 {
+  color: #34495e;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 6px;
+}
+
+.rsvp-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rsvp-list li {
+  background: #f8f9f9;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.rsvp-list .mensagem {
+  font-style: italic;
+  color: #5d6d7e;
+  margin-top: 4px;
+}

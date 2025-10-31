@@ -1,0 +1,80 @@
+.lista-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.lista-container h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.form-convidado {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.form-convidado input {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccd1d1;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+}
+
+.form-convidado button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-convidado button:hover {
+  background-color: #1a252f;
+}
+
+.tabela-convidados {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-convidados th,
+.tabela-convidados td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.tabela-convidados th {
+  background: #f4f6f7;
+  color: #2c3e50;
+}
+
+.editar {
+  background: #3498db;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.excluir {
+  background: #e74c3c;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

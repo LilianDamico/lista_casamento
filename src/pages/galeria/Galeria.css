@@ -1,0 +1,31 @@
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  background: #f9f9f7;
+  padding-top: 120px; /* espaço pro Header fixo */
+}
+
+.galeria__titulo {
+  font-family: 'Lora', serif;
+  color: #24324A;
+  margin-bottom: 24px;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.galeria__slider {
+  width: min(600px, 90%);
+}
+
+.galeria__img {
+  width: 100%;
+  height: 80vh;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 2px #7A8BA0,
+    0 4px 12px rgba(0, 0, 0, 0.1),
+    0 10px 24px rgba(0, 0, 0, 0.05);
+}
