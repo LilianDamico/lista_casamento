@@ -1,67 +1,65 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
 import "./Galeria.css";
 import Header from "components/header/Header";
 
-// importa as imagens manualmente
-import img1 from "assets/image/image1.png";
-import img2 from "assets/image/image2.png";
-import img3 from "assets/image/image3.jpg";
-import img4 from "assets/image/image4.png";
-import img5 from "assets/image/image5.png";
-import img6 from "assets/image/image6.png";
-import img7 from "assets/image/image7.png";
-import img8 from "assets/image/image8.png";
-import img9 from "assets/image/image9.jpg";
-import img10 from "assets/image/image10.jpg";
-import img11 from "assets/image/image11.jpg";
-import img12 from "assets/image/image12.jpg";
-import img13 from "assets/image/image13.jpg";
-import img14 from "assets/image/image14.jpg";
+import img1 from "../../assets/image/image1.jpg";
+import img2 from "../../assets/image/image2.jpg";
+import img3 from "../../assets/image/image3.jpg";
+import img4 from "../../assets/image/image4.jpg";
+import img5 from "../../assets/image/image5.jpg";
+import gypsophila from "../../assets/image/gypsophila.jpg";
+
+const imagens = [img1, img2, img3, img4, img5];
 
 const Galeria: React.FC = () => {
-  const imagens = [
-    img1, 
-    img2, 
-    img3, 
-    img4, 
-    img5, 
-    img6, 
-    img7, 
-    img8, 
-    img9, 
-    img10, 
-    img11, 
-    img12, 
-    img13, 
-    img14
-  ];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-    fade: true,
-  };
+  const [fotoSelecionada, setFotoSelecionada] = useState<string | null>(null);
 
   return (
     <>
       <Header />
-      <section className="galeria">
-        <h2 className="galeria__titulo">Momentos Especiais</h2>
-        <Slider {...settings} className="galeria__slider">
-          {imagens.map((src, index) => (
-            <div key={index} className="galeria__item">
-              <img src={src} alt={`Foto ${index + 1}`} className="galeria__img" />
-            </div>
-          ))}
-        </Slider>
+      <section
+        className="galeria"
+        style={{ backgroundImage: `url(${gypsophila})` }}
+      >
+        <h2 className="galeria__titulo">Galeria de Momentos</h2>
+
+        <div className="galeria__container">
+          {imagens.map((src, index) => {
+            const top = Math.random() * 70 + 10;
+            const left = Math.random() * 70 + 10;
+            const delay = Math.random() * 4;
+            const duration = Math.random() * 3 + 4;
+
+            return (
+              <img
+                key={index}
+                src={src}
+                alt={`Foto ${index + 1}`}
+                className={`galeria__foto ${fotoSelecionada ? "paused" : ""}`}
+                style={{
+                  top: `${top}%`,
+                  left: `${left}%`,
+                  animationDelay: `${delay}s`,
+                  animationDuration: `${duration}s`,
+                }}
+                onClick={() => setFotoSelecionada(src)}
+              />
+            );
+          })}
+        </div>
+
+        {fotoSelecionada && (
+          <div
+            className="galeria__modal"
+            onClick={() => setFotoSelecionada(null)}
+          >
+            <img
+              src={fotoSelecionada}
+              alt="Foto ampliada"
+              className="galeria__foto-grande"
+            />
+          </div>
+        )}
       </section>
     </>
   );

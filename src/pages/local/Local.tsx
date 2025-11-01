@@ -31,13 +31,17 @@ const Local: React.FC = () => {
         <h2 className="local__titulo">Nosso Lugar Especial</h2>        
         {/* CARD DE LOCALIZAÇÃO */}
         <div className="local__card">
-          <h3>Local da Cerimônia</h3>
+          <h3>Cerimônia e Recepção</h3>
           <p>
-            Recanto dos Sonhos<br />
-            Rua dos Trilhos, 150 – São Paulo/SP
+            Cerimônia será realizada na Capela Cecília.
           </p>
+          <p>Recepção no Palazzo Ferrara.</p>
+          <p>
+            Rua da Moóca, 1415 - Moóca – São Paulo/SP.
+          </p>
+          
           <a
-            href="https://www.google.com/maps?q=Recanto+dos+Sonhos,+Rua+das+Palmeiras,+150,+São+Paulo"
+            href="https://www.google.com/maps?q=Palazzo+Ferrara,+Rua+da+Moóca,+1415,+São+Paulo"
             target="_blank"
             rel="noopener noreferrer"
             className="local__link"
